@@ -1,0 +1,56 @@
+<div class="menu">
+<ul class="m1">
+<li><a href="/">首页</a></li>
+<li><a href="/events">活动</a></li>
+<li><a href="#" class="current">专题</a></li>
+<li><a href="guide.html">指南</a></li> 
+<li class="menu_last"><a href="/stories">故事</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+<div class="top_line2"></div>
+<div class="con_w960">
+<div class="prompt">您现在的位置：<a href="/">首页</a> > <span>专题</span></div>
+
+<div class="ac_con">
+<div class="st_left">
+<div class="sub_title"><%= @topic.title %></div>
+<div class="sub_con">
+<% @specials.each do |special| %>
+	<div class="sc_con">
+		<div class="mission_title">
+			<span class="mt_2"><%= special.title %></span>
+		</div>
+		<div class="scc_1">
+		    <p><%= special.content.html_safe %></p> 
+		</div>
+	</div>
+<% end %>
+ 
+</div>
+</div>
+
+<div class="acc_right">
+<div class="sub_img"><img src="images/sub_pic1.jpg" width="250" height="250" /></div>
+
+
+<div class="sub_list">
+<div class="mission_title"><span class="mt_1">专题列表</span></div>
+
+<ul class="sl_con">
+<% @topics.each do |topic| %>
+    <li>
+    	<%= link_to topic.title, '/topics/'+ topic.id.to_s %> 
+    </li>
+<% end %>
+ 
+</ul>
+</div>
+</div>
+
+
+</div>
+</div>

@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @special.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @special.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @special.content %>
+    </p>
+  </section>
+  <section>
+    <h1>Topic</h1>
+    <p>
+      <%=raw @special.topic %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="specials">
+      <% @specials.each do |special| %>
+        <li>
+          <%= link_to special.title, refinery.specials_special_path(special) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,13 @@
+
+<div class="acc_right">
+
+<div class="sub_list">
+<div class="mission_title"><span class="mt_1">文章列表</span></div>
+
+<ul class="sl_con">
+<% @stories.each do |story| %>
+   <li><%= link_to story.title, "/stories/" + story.id.to_s%></li>
+<% end %>
+</ul>
+</div>
+</div>

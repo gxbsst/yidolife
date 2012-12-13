@@ -1,0 +1,82 @@
+<div class="menu">
+<ul class="m1">
+<li><a href="/">首页</a></li>
+<li><a href="/events" class="current">活动</a></li>
+<li><a href="/topics">专题</a></li>
+<li><a href="guide.html">指南</a></li> 
+<li class="menu_last"><a href="/stories">故事</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+<div class="top_line2"></div>
+<div class="con_w960">
+<div class="prompt">您现在的位置：<a href="/">首页</a> > <span>活动</span></div>
+
+<div class="ac_con">
+<div class="acc_left">
+<div class="acl_top">
+<div class="rec_img"><%= image_fu(@event.photo, "200x280px") %></div>
+
+<dl class="at_text">
+<dt><%= @event.title %></dt>
+<dd>时间:  <%= @event.start_time.strftime("%Y-%m-%d %H:%M:%S") %>
+     至 
+    <%= @event.over_time.strftime("%Y-%m-%d %H:%M:%S") %></dd>
+<dd>地点:  <%= @event.address %></dd>
+<dd>费用:  <%= @event.fee %></dd>
+<dd>类型:  <%= @event.categroy %></dd>
+<dd>发起人: <%= @event.maker %></dd>
+
+<dd class="button1">
+  <span>
+    <% if @event.over_time.strftime("%Y-%m-%d %H:%M:%S") <  Time.now.strftime("%Y-%m-%d %H:%M:%S")   %> 
+       <img src="/images/ac_pic4.gif" width="76" height="27" />
+    <% else %>
+        <a href="../contact.html"><img src="/images/ac_pic2.gif" width="76" height="27" /></a>
+    <% end %>
+  </span>
+  <span><a href="http://ydliving.yupoo.com" target="_blank"><img src="/images/ac_pic3.gif" width="76" height="27" /></a></span>
+</dd>
+
+</dl>
+</div>
+
+<div class="acl_bottom">
+<div class="tac_title">
+<span class="tt_7">活动详情</span><span class="tt_6"></span>
+</div>
+
+<div class="ab_text">
+ <%= @event.description.html_safe %>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="acc_right">
+<div class="mission">
+<div class="mission_title"><span class="mt_1">我们的使命</span></div>
+<div class="mission_con">
+<div class="mc_text">简单易行&nbsp;快乐运动&nbsp;人人受益&nbsp;健康生活</div>
+<div class="mc_text2">通过可持续的健康倡导活动,<br />
+提高大众对慢性疾病的预防意识和健康自我管理能力,<br />
+为疾病患者尤其是弱势人群提供更多支持。</div>
+<div class="mc_button"><span><a href="../contact.html"><img src="/images/ac_pic8.gif" width="76" height="27" /></a></span><span><a href="../donation.html"><img src="/images/ac_pic9.gif" width="76" height="27" /></a></span></div>
+</div>
+</div>
+
+<%= render "events_list"%>
+
+</div>
+
+
+</div>
+</div>
+

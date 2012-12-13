@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Photos::Admin::PhotosController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.photos_admin_photos_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_photos_admin_photo_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Photos::Admin::PhotosController.sortable? && ::Refinery::Photos::Photo.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Photos"),
+                 refinery.photos_admin_photos_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Photos"),
+                 refinery.photos_admin_photos_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

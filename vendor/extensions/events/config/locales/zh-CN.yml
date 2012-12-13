@@ -1,0 +1,38 @@
+zh-CN:
+  refinery:
+    plugins:
+      events:
+        title: 活动
+    events:
+      admin:
+        events:
+          actions:
+            create_new: 建立新的 活动
+            reorder: 对 活动 重新排序
+            reorder_done: 对 活动 的重新排序结束
+          records:
+            title: 活动
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Events yet. Click "Add New Event" to add your first event.
+            no_items_yet: 目前没有 活动 . 点击 "创建活动" 创建一个活动.
+          event:
+            view_live_html: 查看 活动 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 活动
+            delete: 永久删除 活动
+      events:
+        show:
+          other: 其他 活动
+  activerecord:
+    attributes:
+      'refinery/events/event':
+        title: 活动标题
+        photo: 活动图片
+        start_time: 活动开始时间
+        over_time: 活动结束时间
+        address: 活动地点
+        fee: 活动费用
+        categroy: 活动类型
+        maker: 发起人
+        description: 活动详情
+        is_show: 是否展示在首页

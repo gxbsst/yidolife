@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      photos:
+        title: 首页展示图片
+    photos:
+      admin:
+        photos:
+          actions:
+            create_new: 建立新的 展示图片
+            reorder: 对 展示图片 重新排序
+            reorder_done: 对 展示图片 的重新排序结束
+          records:
+            title: 展示图片
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Photos yet. Click "Add New Photo" to add your first photo.
+            no_items_yet: 目前没有 展示图片 . 点击 "建立新的展示图片" 创建一个展示图片.
+          photo:
+            view_live_html: 查看 展示图片 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 展示图片
+            delete: 永久删除 展示图片
+      photos:
+        show:
+          other: 其他 展示图片
+  activerecord:
+    attributes:
+      'refinery/photos/photo':
+        title: 图片名称
+        picture: 展示图片
+        content: 图片简介

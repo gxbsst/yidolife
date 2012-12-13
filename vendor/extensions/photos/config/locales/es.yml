@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      photos:
+        title: Photos
+#        article: masculino/femenino
+    photos:
+      admin:
+        photos:
+          actions:
+            create_new: Crear nuevo photo
+            reorder: Reordenar photos
+            reorder_done: Reordenación de photos completada
+          records:
+            title: Photos
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay photos todavía. Pulsa en "Crear nuevo Photo" para crear tu primer photo.
+          photo:
+            view_live_html: Ver este photo como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este photo
+            delete: Borrar este photo para siempre
+      photos:
+        show:
+          other: Otros photos
+  activerecord:
+    attributes:
+      'refinery/photos/photo':
+        title: Title
+        picture: Picture
+        content: Content

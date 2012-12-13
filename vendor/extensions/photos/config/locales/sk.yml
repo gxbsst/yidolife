@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      photos:
+        title: Photos
+    photos:
+      admin:
+        photos:
+          actions:
+            create_new: Pridať Photo
+            reorder: Preusporiadať Photos
+            reorder_done: Koniec radenia Photos
+          records:
+            title: Photos
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Photos. Kliknite na "Pridať Photo" pre pridanie prvého photo.
+          photo:
+            view_live_html: Zobraziť náhľad photo<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť photo
+            delete: Zmazať photo
+      photos:
+        show:
+          other: Daľšie Photos
+  activerecord:
+    attributes:
+      'refinery/photos/photo':
+        title: Title
+        picture: Picture
+        content: Content

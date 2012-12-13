@@ -1,0 +1,28 @@
+sk:
+  refinery:
+    plugins:
+      topics:
+        title: Topics
+    topics:
+      admin:
+        topics:
+          actions:
+            create_new: Pridať Topic
+            reorder: Preusporiadať Topics
+            reorder_done: Koniec radenia Topics
+          records:
+            title: Topics
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Topics. Kliknite na "Pridať Topic" pre pridanie prvého topic.
+          topic:
+            view_live_html: Zobraziť náhľad topic<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť topic
+            delete: Zmazať topic
+      topics:
+        show:
+          other: Daľšie Topics
+  activerecord:
+    attributes:
+      'refinery/topics/topic':
+        title: Title
+        photo: Photo

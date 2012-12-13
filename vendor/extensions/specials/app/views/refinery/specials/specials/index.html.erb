@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="specials">
+    <% @specials.each do |special| %>
+      <li>
+        <%= link_to special.title, refinery.specials_special_path(special) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

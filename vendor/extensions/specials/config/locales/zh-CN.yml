@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      specials:
+        title: 专题内容
+    specials:
+      admin:
+        specials:
+          actions:
+            create_new: 建立新的 专题内容
+            reorder: 对 专题内容 重新排序
+            reorder_done: 对 专题内容 的重新排序结束
+          records:
+            title: 专题内容
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Specials yet. Click "Add New Special" to add your first special.
+            no_items_yet: 目前没有 专题内容 . 点击 "创建专题内容" 创建一个专题内容.
+          special:
+            view_live_html: 查看 专题内容 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 专题内容
+            delete: 永久删除 专题内容
+      specials:
+        show:
+          other: 其他 专题内容
+  activerecord:
+    attributes:
+      'refinery/specials/special':
+        title: 专题内容的标题
+        content: 专题内容
+        topic: 专题内容所属的专题

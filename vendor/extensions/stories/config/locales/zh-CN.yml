@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      stories:
+        title: 故事
+    stories:
+      admin:
+        stories:
+          actions:
+            create_new: 建立新的 故事
+            reorder: 对 故事 重新排序
+            reorder_done: 对 故事 的重新排序结束
+          records:
+            title: 故事
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Stories yet. Click "Add New Story" to add your first story.
+            no_items_yet: 目前没有 故事 . 点击 "创建故事" 创建一个故事.
+          story:
+            view_live_html: 查看 故事 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 故事
+            delete: 永久删除 故事
+      stories:
+        show:
+          other: 其他 故事
+  activerecord:
+    attributes:
+      'refinery/stories/story':
+        title: 故事标题
+        time: 故事时间
+        content: 故事内容

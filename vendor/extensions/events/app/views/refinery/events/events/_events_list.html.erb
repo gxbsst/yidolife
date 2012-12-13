@@ -1,0 +1,23 @@
+<div class="rb_con">
+<div class="tac_title">
+<span class="tt_1">往期回顾</span><span class="tt_2">REVIEW BACK</span>
+</div>
+<ul class="rbc_list">
+<% @events.each_with_index do |event,index| %>
+  <% if index%2 == 0 %>
+    <li>
+      <%= link_to '/events/' +event.id.to_s do %>
+        <%= image_fu(event.photo, "112x142px") %>
+      <% end %>
+    </li>  
+  <% elsif index%2 == 1 %>
+    <li class="rl_right">
+      <%= link_to '/events/' +event.id.to_s do %>
+        <%= image_fu(event.photo, "112x142px") %>
+      <% end %>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+
+</div>

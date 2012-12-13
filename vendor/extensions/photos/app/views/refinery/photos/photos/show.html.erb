@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @photo.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @photo.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Picture</h1>
+    <p>
+      <%= image_fu @photo.picture, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @photo.content %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="photos">
+      <% @photos.each do |photo| %>
+        <li>
+          <%= link_to photo.title, refinery.photos_photo_path(photo) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

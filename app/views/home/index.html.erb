@@ -1,0 +1,91 @@
+<div class="menu">
+<ul class="m1">
+<li><a href="#" class="current">首页</a></li>
+<li><a href="/events">活动</a></li>
+<li><a href="/topics">专题</a></li>
+<li><a href="guide.html">指南</a></li> 
+<li class="menu_last"><a href="/stories">故事</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class="banner"><img src="images/banner.jpg" width="960" height="325" /></div>
+<div class="ind_con">
+<div class="ic_left">
+<div class="ta_con">
+<div class="tac_title">
+<span class="tt_1">主题活动</span><span class="tt_2">THEME ACTIVITY</span><span class="tt_3"></span>
+</div>
+<% unless @event.blank? %>
+	<% @event.each do |event| %>
+		<div class="tac_con">
+		<div class="tcc_img"><%= image_fu(event.photo, "140x180px") %></div>
+		<dl class="tcc_text">
+		<dt><%= event.title %></dt>
+		<dd>时间:  <%= event.start_time %> 至 <%= event.over_time %></dd>
+		<dd>地点:  <%= event.address %></dd>
+		<dd>费用:  <%= event.fee %>    </dd>
+		<dd>发起人: <%= event.maker %> </dd>
+		<dd class="btn"><a href="/events/<%= event.id.to_s %>"><img src="images/index_pic6.gif" width="76" height="27" /></a></dd>
+		</dl>
+		</div>
+	<% end %>
+<% end %>
+
+</div>
+
+
+<div class="ta_con">
+<div class="tac_title">
+<span class="tt_1">活动掠影</span><span class="tt_2">ACTIVITY PHOTOS</span><span class="tt_4"></span>
+</div>
+
+<div class="ap_con">
+<div class="apc_text">每个人都能有足够的意识和行动来维护自身健康、预防慢性疾病,并能得到全社会的充分支持。</div>
+
+<div class="apc_list">
+<% @photos.each do |photo| %>
+	<div class="al_1">
+	<span class="ai_img"><%= image_fu(photo.picture, "150x90px") %></span>
+	<span class="ai_text"><%= photo.content.truncate(16).html_safe %></span>
+	</div>
+<% end %>
+</div>
+
+</div>
+</div>
+
+
+
+</div>
+
+<div class="ic_right">
+<div class="brand">
+<div class="brand_title">品牌介绍</div>
+<div class="brand_con">益动生活做为上海新途社区健康促进社旗下的一个健康品牌,旨在发动公众参与和组织以运动为主要形式的倡导活动,<br />
+  在全社会推广健康生活方式,提高公众对慢性疾病的预防意识和健康自我管理能力;<br />
+  并通过设立专项基金和组织筹款活动,帮助社区慢性疾病的预防治疗、教育研究和项目的可持续发展。</div>
+
+</div>
+
+<div class="attention">
+<div class="brand_title">关注我们</div>
+</div>
+<ul class="att_list">
+<li><span><a href="http://weibo.com/ydliving" target="_blank"><img src="images/index_pic8.gif" width="30" height="30" /></a></span><span>新浪微博</span></li>
+<li><span><a href="http://site.douban.com/167626/" target="_blank"><img src="images/index_pic9.gif" width="30" height="30" /></a></span><span>豆瓣小站</span></li>
+<li><span><a href="http://ydliving.yupoo.com" target="_blank"><img src="images/index_pic10.gif" width="30" height="30" /></a></span><span>又拍相册</span></li>
+<li><span><a href="http://i.youku.com/ydliving" target="_blank"><img src="images/index_pic11.gif" width="30" height="30" /></a></span><span>优酷视频</span></li>
+
+</ul>
+
+<div class="att_text">我们致力于：提供慢性疾病预防的相关知识、提供开展健康运动的组织方案、提供宣传及筹款工具包。</div>
+
+</div>
+
+</div>
+
+</div>
+ 

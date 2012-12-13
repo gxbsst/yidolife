@@ -1,0 +1,38 @@
+<div class="menu">
+<ul class="m1">
+<li><a href="/">首页</a></li>
+<li><a href="/events">活动</a></li>
+<li><a href="/topics">专题</a></li>
+<li><a href="guide.html">指南</a></li> 
+<li class="menu_last"><a href="#" class="current">故事</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+<div class="top_line2"></div>
+<div class="con_w960">
+<div class="prompt">您现在的位置：<a href="/">首页</a> > <span>故事</span></div>
+
+<div class="ac_con">
+<div class="st_left">
+<div class="story_con">
+  <% unless @story.blank? %>
+    <div class="story_title"><%= @story.title %></div>
+    <div class="story_date">时间：<%= @story.time %></div>
+    <div class="stc_con">
+    <p><%= @story.content.html_safe %></p>
+    </div>
+  <% end%>
+
+</div>
+
+
+</div>
+
+
+<%= render "stories_list"%>
+</div>
+</div>
+
