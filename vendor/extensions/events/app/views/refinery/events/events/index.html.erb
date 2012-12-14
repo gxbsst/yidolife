@@ -40,7 +40,11 @@
 <ul class="act_review">
 <% @events.each do |event| %>
   <li> 
-  	<span class="ar_img"><%=image_fu(event.photo, "160x200px") %></span>
+  	<span class="ar_img">
+  		<%= link_to "/events/#{event.id}"  do %>
+		    <%= image_fu(event.photo, "160x200px") %>
+        <% end %> 
+  	</span>
   	<span class="ar_title"><%= link_to event.title, "/events/#{event.id}" %></span>
     <span class="ar_share">
     	<div id="share_<%= event.id %>" >

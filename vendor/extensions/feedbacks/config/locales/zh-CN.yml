@@ -2,29 +2,29 @@ zh-CN:
   refinery:
     plugins:
       feedbacks:
-        title: Feedbacks
+        title: 意见反馈
     feedbacks:
       admin:
         feedbacks:
           actions:
-            create_new: 建立新的 Feedback
-            reorder: 对 Feedbacks 重新排序
-            reorder_done: 对 Feedbacks 的重新排序结束
+            create_new: 建立新的 意见反馈
+            reorder: 对 意见反馈 重新排序
+            reorder_done: 对 意见反馈 的重新排序结束
           records:
-            title: Feedbacks
+            title: 意见反馈
             sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
 
             # There are no Feedbacks yet. Click "Add New Feedback" to add your first feedback.
-            no_items_yet: 目前没有 Feedbacks . 点击 "Add New Feedback" 创建一个feedback.
+            no_items_yet: 目前没有 意见反馈 . 点击 "创建新意见反馈" 意见反馈.
           feedback:
-            view_live_html: 查看 feedback 的最新内容.<br/><em>(新窗口中打开)</em>
-            edit: 编辑 feedback
-            delete: 永久删除 feedback
+            view_live_html: 查看 意见反馈 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 意见反馈
+            delete: 永久删除 意见反馈
       feedbacks:
         show:
-          other: 其他 Feedbacks
+          other: 其他 意见反馈
   activerecord:
     attributes:
       'refinery/feedbacks/feedback':
-        title: Title
-        description: Description
+        title: 意见反馈 时间
+        description: 意见反馈 内容
