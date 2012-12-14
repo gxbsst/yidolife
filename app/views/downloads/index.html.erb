@@ -4,7 +4,7 @@
 <li><a href="/events">活动</a></li>
 <li><a href="/topics">专题</a></li>
 <li><a href="#" class="current">指南</a></li> 
-<li class="menu_last"><a href="story.html">故事</a></li>
+<li class="menu_last"><a href="/stories">故事</a></li>
 </ul>
 </div>
 </div>
@@ -16,36 +16,15 @@
 <div class="prompt">您现在的位置：<a href="/">首页</a> > <span>指南</span></div>
 <div class="review">
   <ul class="guide_list">
-<li>
-<span class="gl_img"><img src="images/guide_pic1.jpg" width="160" height="200" /></span>
-<span class="gl_title">指南名称指南名称</span>
-<span class="gl_button"><a href="#"><img src="images/guide_pic6.gif" width="69" height="26" /></a></span>
-</li>
-
-<li>
-<span class="gl_img"><img src="images/guide_pic2.jpg" width="160" height="200" /></span>
-<span class="gl_title">指南名称指南名称</span>
-<span class="gl_button"><a href="#"><img src="images/guide_pic6.gif" width="69" height="26" /></a></span>
-</li>
-
-<li>
-<span class="gl_img"><img src="images/guide_pic3.jpg" width="160" height="200" /></span>
-<span class="gl_title">指南名称指南名称</span>
-<span class="gl_button"><a href="#"><img src="images/guide_pic6.gif" width="69" height="26" /></a></span>
-</li>
-
-<li>
-<span class="gl_img"><img src="images/guide_pic4.jpg" width="160" height="200" /></span>
-<span class="gl_title">指南名称指南名称</span>
-<span class="gl_button"><a href="#"><img src="images/guide_pic6.gif" width="69" height="26" /></a></span>
-</li>
-
-<li>
-<span class="gl_img"><img src="images/guide_pic5.jpg" width="160" height="200" /></span>
-<span class="gl_title">指南名称指南名称</span>
-<span class="gl_button"><a href="#"><img src="images/guide_pic6.gif" width="69" height="26" /></a></span>
-</li>
-
+<% @files.each do |file| %>
+	<li>
+	<span class="gl_img"><%= image_fu(file.picture, "160x200px") %></span>
+	<span class="gl_title"><%= file.name %></span>
+	<span class="gl_button">
+		<%= link_to "点击下载",file.url %>   
+	</span>
+	</li>
+<% end %>
 
 </ul>
 

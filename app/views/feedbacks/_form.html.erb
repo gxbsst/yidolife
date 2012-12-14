@@ -1,0 +1,32 @@
+<%= form_for @feedback do |f| -%>
+
+<div class="opinion_con" style="display:block;">
+<div class="oc_left">
+<div class="ol_title"><img src="images/opinion_pic3.gif" width="100" height="30" /></div>
+<div class="ol_con">
+	<%= f.text_area :description, :class => :textarea1, :placeholder => "写点意见或建议吧⋯⋯" %>
+</div>
+<div class="ol_button">
+	<span>
+		<%= image_submit_tag("/images/opinion_pic5.gif") %>
+		</span>
+	<span><a href="javascrit:void(0)" id="cancle"><img src="images/opinion_pic6.gif" width="69" height="28" /></a></span>
+</div>
+
+</div>
+<div class="oc_right"><a href="#"><img src="images/opinion_pic4.gif" width="25" height="25" /></a></div>
+</div>
+
+  
+<% end -%>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	// $("#submit").click(function(){
+	// 	$("#new_feedback").submit();
+	// });
+	$("#cancle").click(function(){
+		$.fancybox.close();
+	});
+});
+</script>

@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      feedbacks:
+        title: Feedbacks
+#        article: masculino/femenino
+    feedbacks:
+      admin:
+        feedbacks:
+          actions:
+            create_new: Crear nuevo feedback
+            reorder: Reordenar feedbacks
+            reorder_done: Reordenación de feedbacks completada
+          records:
+            title: Feedbacks
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay feedbacks todavía. Pulsa en "Crear nuevo Feedback" para crear tu primer feedback.
+          feedback:
+            view_live_html: Ver este feedback como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este feedback
+            delete: Borrar este feedback para siempre
+      feedbacks:
+        show:
+          other: Otros feedbacks
+  activerecord:
+    attributes:
+      'refinery/feedbacks/feedback':
+        title: Title
+        description: Description

@@ -27,6 +27,8 @@ end
 
 gem 'jquery-rails', '~> 2.0.0'
 
+gem 'fancybox-rails', :git => 'git://github.com/sverigemeny/fancybox-rails', :ref => "17db886581f3"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -57,4 +59,5 @@ gem 'refinerycms-topics', :path => 'vendor/extensions'
 gem 'refinerycms-specials', :path => 'vendor/extensions' 
 gem 'refinerycms-stories', :path => 'vendor/extensions'
 gem 'refinerycms-partners', :path => 'vendor/extensions'  
-gem 'refinerycms-events', :path => 'vendor/extensions'
+gem 'refinerycms-events', :path => 'vendor/extensions' 
+gem 'refinerycms-feedbacks', :path => 'vendor/extensions'

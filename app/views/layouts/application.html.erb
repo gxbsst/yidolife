@@ -5,6 +5,11 @@
 <title>益动生活</title>
 <%= stylesheet_link_tag "/css/style" %>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+
+<%= javascript_include_tag "application" %>
+<%= stylesheet_link_tag "application" %>
+ 
+
 </head>
 
 <body>
@@ -20,19 +25,13 @@
 </script>
  
 <div class="yd_con">
-<div class="opinion"><a href="#">意见反馈</a></div>
-<div class="opinion_con" style="display:none;">
-<div class="oc_left">
-<div class="ol_title"><img src="/images/opinion_pic3.gif" width="100" height="30" /></div>
-<div class="ol_con">
-  <textarea class="textarea1">写点意见或建议吧⋯⋯</textarea>
-</div>
-<div class="ol_button"><span><a href="#"><img src="/images/opinion_pic5.gif" width="69" height="28" /></a></span><span><a href="#"><img src="/images/opinion_pic6.gif" width="69" height="28" /></a></span></div>
-
-</div>
-<div class="oc_right"><a href="#"><img src="/images/opinion_pic4.gif" width="25" height="25" /></a></div>
+<div class="opinion">
+ <%= link_to "意见反馈",new_feedback_path, :remote => true, :class => [:pc1_img, :ajax] %>
 </div>
 
+<div id="feedback">
+
+</div>
 
 
 <div class="top_line"></div>

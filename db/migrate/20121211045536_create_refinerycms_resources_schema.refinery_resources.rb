@@ -6,7 +6,7 @@ class CreateRefinerycmsResourcesSchema < ActiveRecord::Migration
       t.string   :file_name
       t.integer  :file_size
       t.string   :file_uid
-      t.string   :file_ext
+      t.string   :file_ext 
 
       t.timestamps
     end

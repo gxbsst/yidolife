@@ -41,3 +41,6 @@ Refinery::Times::Engine.load_seed
 
 # Added by Refinery CMS Activities extension
 Refinery::Activities::Engine.load_seed
+
+# Added by Refinery CMS Feedbacks extension
+Refinery::Feedbacks::Engine.load_seed

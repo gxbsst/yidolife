@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="feedbacks">
+    <% @feedbacks.each do |feedback| %>
+      <li>
+        <%= link_to feedback.title, refinery.feedbacks_feedback_path(feedback) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

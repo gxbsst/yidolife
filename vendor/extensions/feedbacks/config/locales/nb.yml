@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      feedbacks:
+        title: Feedbacks
+    feedbacks:
+      admin:
+        feedbacks:
+          actions:
+            create_new: Lag en ny Feedback
+            reorder: Endre rekkefølgen på Feedbacks
+            reorder_done: Ferdig å endre rekkefølgen Feedbacks
+          records:
+            title: Feedbacks
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Feedbacks enda. Klikk på "Lag en ny Feedback" for å legge til din første feedback.
+          feedback:
+            view_live_html: Vis hvordan denne feedback ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne feedback
+            delete: Fjern denne feedback permanent
+      feedbacks:
+        show:
+          other: Andre Feedbacks
+  activerecord:
+    attributes:
+      'refinery/feedbacks/feedback':
+        title: Title
+        description: Description

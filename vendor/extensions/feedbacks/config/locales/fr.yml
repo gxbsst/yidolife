@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      feedbacks:
+        title: Feedbacks
+    feedbacks:
+      admin:
+        feedbacks:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Feedback
+            reorder: Réordonner les Feedbacks
+            reorder_done: Fin de réordonnancement des Feedbacks
+          records:
+            title: Feedbacks
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Feedback. Cliquer sur "Créer un(e) nouve(au/l/lle) Feedback" pour créer votre premi(er/ère) feedback.'
+          feedback:
+            view_live_html: Voir ce(t/tte) feedback <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) feedback
+            delete: Supprimer définitivement ce(t/tte) feedback
+      feedbacks:
+        show:
+          other: Autres Feedbacks
+  activerecord:
+    attributes:
+      'refinery/feedbacks/feedback':
+        title: Title
+        description: Description

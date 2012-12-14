@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @feedback.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @feedback.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @feedback.description %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="feedbacks">
+      <% @feedbacks.each do |feedback| %>
+        <li>
+          <%= link_to feedback.title, refinery.feedbacks_feedback_path(feedback) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

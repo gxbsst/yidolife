@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121213064950) do
+ActiveRecord::Schema.define(:version => 20121214083621) do
 
   create_table "refinery_events", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(:version => 20121213064950) do
     t.string   "maker"
     t.text     "description"
     t.boolean  "is_show"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "refinery_feedbacks", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
     t.integer  "position"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -131,6 +139,7 @@ ActiveRecord::Schema.define(:version => 20121213064950) do
     t.datetime "updated_at",     :null => false
     t.string   "name"
     t.integer  "picture_id"
+    t.string   "category"
   end
 
   create_table "refinery_roles", :force => true do |t|
