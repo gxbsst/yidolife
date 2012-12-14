@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   def index
      @event = Refinery::Events::Event.where("is_show = 1").order('position ASC, created_at DESC').limit(1)  
      @photos = Refinery::Photos::Photo.order('position ASC, created_at DESC').limit(3)
+     render :layout => false
   end
 
 end
