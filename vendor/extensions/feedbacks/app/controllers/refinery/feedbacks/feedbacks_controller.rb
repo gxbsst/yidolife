@@ -1,9 +1,9 @@
 module Refinery
   module Feedbacks
     class FeedbacksController < ::ApplicationController
-
       before_filter :find_all_feedbacks
-      before_filter :find_page
+      before_filter :find_page 
+      before_filter :authenticate_user!, :expect => [:index]
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
@@ -11,9 +11,8 @@ module Refinery
         present(@page)
       end
 
-      def show
+      def show 
         @feedback = Feedback.find(params[:id])
-
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @feedback in the line below:
         present(@page)
@@ -27,8 +26,7 @@ module Refinery
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/feedbacks").first
-      end
-
+      end 
     end
   end
 end

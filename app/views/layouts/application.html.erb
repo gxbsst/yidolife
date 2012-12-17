@@ -13,17 +13,17 @@
 </head>
 
 <body>
- 
+<!-- Put the following javascript before the closing </head> tag. -->
 <script>
   (function() {
-    var cx = '018117245119136040728:040xy2hw_z8';
+    var cx = '018117245119136040728:zmcrzya157k';
     var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
     gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
         '//www.google.com/cse/cse.js?cx=' + cx;
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
   })();
 </script>
- 
+
 <div class="yd_con">
 <div class="opinion">
  <%= link_to "意见反馈",new_feedback_path, :remote => true, :class => [:pc1_img, :ajax] %>
@@ -40,10 +40,10 @@
 <div class="top_right">
 <div class="search">
 	 <form method="get" action="http://www.google.com/search">
-       <!-- Place this tag where you want the search box to render -->
-       <gcse:searchbox-only></gcse:searchbox-only>
- 
-     </form>
+    
+        <!-- Place this tag where you want the search box to render -->
+        <gcse:searchbox-only></gcse:searchbox-only>
+   </form>
  
 </div>
 

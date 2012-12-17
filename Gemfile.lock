@@ -210,12 +210,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  devise (~> 2.0.4)
   fancybox-rails!
   jquery-rails (~> 2.0.0)
   mysql2
   pry
   rails (= 3.2.9)
   refinerycms (~> 2.0.0)
+  refinerycms-authentication (~> 2.0.9)
   refinerycms-events!
   refinerycms-feedbacks!
   refinerycms-i18n (~> 2.0.0)

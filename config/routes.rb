@@ -1,4 +1,6 @@
 YidoLife::Application.routes.draw do
+  devise_for :users
+
   root :to => 'home#index'
     match "home", :to => "home#index"  
     match "contact", :to => "static#contact"

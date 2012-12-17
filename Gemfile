@@ -13,6 +13,7 @@ gem 'mysql2'
 
 
 gem 'pry'
+gem 'devise', "~> 2.0.4"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -53,6 +54,8 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
+ gem 'refinerycms-authentication', '~> 2.0.9'
+
  
 gem 'refinerycms-photos', :path => 'vendor/extensions'
 gem 'refinerycms-topics', :path => 'vendor/extensions'  
