@@ -28,4 +28,4 @@ zh-CN:
       'refinery/specials/special':
         title: 专题内容的标题
         content: 专题内容
-        topic: 专题内容所属的专题
+        topic_id: 选择内容所属的专题
