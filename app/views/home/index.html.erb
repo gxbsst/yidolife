@@ -62,7 +62,19 @@
 
 </div>
 
-<div class="banner"><img src="images/banner.jpg" width="960" height="325" /></div>
+<div id="bannercontent">
+   <div id="bannerlist">
+   <ul>
+   	<% @banners.each do |banner| %>
+     <li><a href="#"><%= image_fu(banner.picture) %></a></li>
+    <% end %>
+   </ul>
+ </div>
+ <div class="prev" id="prevbtn"></div>
+ <div class="next" id="nextbtn"></div>
+</div>
+
+
 <div class="ind_con">
 <div class="ic_left">
 <div class="ta_con">
@@ -99,8 +111,12 @@
 <div class="apc_list">
 <% @photos.each do |photo| %>
 	<div class="al_1">
-	<span class="ai_img"><%= image_fu(photo.picture, "150x90px") %></span>
-	<span class="ai_text"><%= photo.content.truncate(14).html_safe %></span>
+	<span class="ai_img">
+		<%= link_to photo.url do %>
+		  <%= image_fu(photo.picture, "150x90px") %>
+		<% end %>  
+	</span>
+	<span class="ai_text"><%= photo.content.html_safe %></span>
 	</div>
 <% end %>
 </div>
@@ -146,6 +162,13 @@
 </div>
 </div>
 </div>
+	<script type="text/javascript" src="/js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
+	<script type="text/javascript" src="/js/base.js"></script>
+	<!--[if IE 6]>
+		<script type="text/javascript" src="/js/png.js"></script>
+	<!--<![endif]-->
+	<script language="javascript" type="text/javascript" src="/js/default.js"></script>
 </body>
 </html>
 

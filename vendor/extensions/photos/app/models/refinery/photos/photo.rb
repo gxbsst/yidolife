@@ -3,7 +3,7 @@ module Refinery
     class Photo < Refinery::Core::BaseModel
       self.table_name = 'refinery_photos'
 
-      attr_accessible :title, :picture_id, :content, :position
+      attr_accessible :title, :picture_id, :content, :position, :url
 
       acts_as_indexed :fields => [:title, :content]
 

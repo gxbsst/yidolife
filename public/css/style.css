@@ -10,6 +10,48 @@ img{ border:none;}
 
 
 /* 首页 */
+#bannercontent{ /*left:-30px;*/position:relative; height:325px; width:960px;}
+.prev{
+	width:32px;
+	height:38px;
+	background:url(../images/prev.png) no-repeat 0px 0px;
+	cursor:pointer;
+	position:absolute;
+	left:15px;
+	top:145px;
+	_background-image:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/prev.png',sizingMethod='image');}
+
+
+.next{
+	width:32px;
+	height:38px;
+	background:url(../images/next.png) no-repeat 0px 0px;
+	cursor:pointer;
+	position:absolute;
+	right:15px;
+	top:145px;
+	_background-image:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/next.png',sizingMethod='image');}
+
+
+
+
+
+
+#bannerlist{ height:325px;  position:relative; width:960px;overflow:hidden;}
+#bannerlist img{ width:960px; height:325px;}
+#bannerlist ul{
+	width:2880px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+#bannerlist li{ width:960px; float:left; height:325px; overflow:hidden;}
+
+
+
+
 .yd_con{ }
 .opinion{float:right;position:fixed;width:29px;	height:135px;	top:250px;	right:0px;}
 .opinion a{ display:block; width:29px; height:135px; background:url(../images/opinion_pic1.gif) no-repeat; font-size:0px;}
@@ -42,6 +84,9 @@ ul.m1 li.menu_last{ background:none; width:60px; text-align:right;}
 .menu a{ display:block; height:30px; line-height:30px;  font-size:14px; font-weight:bold;   }
 .menu a:hover{ color:#ff9600;}
 .menu a.current{color:#ff9600; }
+
+
+
 
 .ind_con{ padding:45px 0px;overflow:hidden;}
 .ic_left{ float:left; width:570px; }

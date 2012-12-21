@@ -2,7 +2,7 @@ zh-CN:
   refinery:
     plugins:
       photos:
-        title: 首页展示图片
+        title: 活动掠影
     photos:
       admin:
         photos:
