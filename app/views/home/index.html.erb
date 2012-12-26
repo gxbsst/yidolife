@@ -48,7 +48,6 @@
      </form>
  
 </div>
-
 <div class="menu">
 <ul class="m1">
 <li><a href="#" class="current">首页</a></li>
@@ -62,6 +61,14 @@
 
 </div>
 
+
+
+<% if flash[:notice].present? %>
+<div class="prompt_con">
+
+<div class="po_left"><%= flash[:notice] %></div>
+</div>
+<% end %>
 <div id="bannercontent">
    <div id="bannerlist">
    <ul>

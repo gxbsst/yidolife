@@ -9,6 +9,11 @@ img,li{ vertical-align:top;}
 img{ border:none;}
 
 
+.prompt_con{ width:936px; padding:10px;  border:2px solid #ffd800; background:#fff; margin-bottom:10px; position:relative; }
+.po_left{line-height:22px; text-align:left; margin-right:30px;font-size: 14px;color:red;}
+
+
+
 /* 首页 */
 #bannercontent{ /*left:-30px;*/position:relative; height:325px; width:960px;}
 .prev{

@@ -1,3 +1,4 @@
+  # encoding: utf-8
     class FeedbacksController < ::ApplicationController
 
       before_filter :find_all_feedbacks
@@ -15,7 +16,12 @@
 
       def create
         # params[:feedbacks][:title] = Time.now
+        if params[:feedback][:description].blank?
+          flash[:notice] = "反馈的内容不能为空！"
+          redirect_to root_path
+        else
         redirect_to root_path if Refinery::Feedbacks::Feedback.create(:description => params[:feedback][:description], :title => Time.now)
+        end
 
       end
 
