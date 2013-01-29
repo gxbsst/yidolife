@@ -7,13 +7,13 @@
   <% if index%2 == 0 %>
     <li>
       <%= link_to '/events/' +event.id.to_s do %>
-        <%= image_fu(event.photo, "112x142px") %>
+        <%= image_fu(event.photo, "112x168px") %>
       <% end %>
     </li>  
   <% elsif index%2 == 1 %>
     <li class="rl_right">
       <%= link_to '/events/' +event.id.to_s do %>
-        <%= image_fu(event.photo, "112x142px") %>
+        <%= image_fu(event.photo, "112x168px") %>
       <% end %>
     </li>
   <% end %>
