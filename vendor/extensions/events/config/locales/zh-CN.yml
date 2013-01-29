@@ -15,7 +15,7 @@ zh-CN:
             sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
 
             # There are no Events yet. Click "Add New Event" to add your first event.
-            no_items_yet: 目前没有 活动 . 点击 "创建活动" 创建一个活动.
+            no_items_yet: 目前没有 活动 . 点击 "创建新 活动" 创建一个活动.
           event:
             view_live_html: 查看 活动 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 活动
@@ -26,13 +26,13 @@ zh-CN:
   activerecord:
     attributes:
       'refinery/events/event':
-        title: 活动标题
-        photo: 活动图片
-        start_time: 活动开始时间
-        over_time: 活动结束时间
-        address: 活动地点
-        fee: 活动费用
-        categroy: 活动类型
-        maker: 发起人
+        title: 主题
+        photo: 图片
+        time: 时间
+        address: 地点
+        fee: 费用
+        categroy: 类型
+        end_time: 报名结束时间
+        people_num: 报名人数
         description: 活动详情
-        is_show: 是否展示在首页
+        is_show: 是否展示首页

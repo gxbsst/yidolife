@@ -26,11 +26,11 @@ en:
       'refinery/events/event':
         title: Title
         photo: Photo
-        start_time: Start Time
-        over_time: Over Time
+        time: Time
         address: Address
         fee: Fee
         categroy: Categroy
-        maker: Maker
+        end_time: End Time
+        people_num: People Num
         description: Description
         is_show: Is Show

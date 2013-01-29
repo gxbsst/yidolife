@@ -4,7 +4,8 @@
 <li><a href="/events" class="current">活动</a></li>
 <li><a href="/topics">专题</a></li>
 <li><a href="/downloads">指南</a></li> 
-<li class="menu_last"><a href="/stories">故事</a></li>
+<li class="ml_1"><a href="/stories">故事</a></li>
+<li class="menu_last"><a href="/donation" class="btn_menu">捐赠</a></li>
 </ul>
 </div>
 </div>
@@ -18,28 +19,15 @@
 <div class="ac_con">
 <div class="acc_left">
 <div class="acl_top">
-<div class="rec_img"><%= image_fu(@event.photo, "200x280px") %></div>
+<div class="rec_img"><%= image_fu(@event.photo, "180x270px") %></div>
 
 <dl class="at_text">
 <dt><%= @event.title %></dt>
-<dd>时间:  <%= @event.start_time.strftime("%Y-%m-%d %H:%M:%S") %>
-     至 
-    <%= @event.over_time.strftime("%Y-%m-%d %H:%M:%S") %></dd>
+<dd>时间:  <%= @event.time.strftime("%Y-%m-%d %H:%M:%S") %></dd>
 <dd>地点:  <%= @event.address %></dd>
 <dd>费用:  <%= @event.fee %></dd>
 <dd>类型:  <%= @event.categroy %></dd>
-<dd>发起人: <%= @event.maker %></dd>
-
-<dd class="button1">
-  <span>
-    <% if @event.over_time.strftime("%Y-%m-%d %H:%M:%S") <  Time.now.strftime("%Y-%m-%d %H:%M:%S")   %> 
-       <img src="/images/ac_pic4.gif" width="76" height="27" />
-    <% else %>
-        <a href="../contact.html"><img src="/images/ac_pic2.gif" width="76" height="27" /></a>
-    <% end %>
-  </span>
-  <span><a href="http://ydliving.yupoo.com" target="_blank"><img src="/images/ac_pic3.gif" width="76" height="27" /></a></span>
-</dd>
+<dd>报名截止: <%= @event.end_time.strftime("%Y-%m-%d %H:%M:%S") %> </dd>
 
 </dl>
 </div>
@@ -59,8 +47,36 @@
 
 
 
-
 <div class="acc_right">
+
+<div class="mission">
+<div class="mission_title"><span class="mt_1">报名参与</span></div>
+<div class="reg_con">
+
+<div class="reg_text1">距离报名结束还有</div>
+<div class="reg_text2"><span class="rt_1"><%= @event.time_end.to_i %></span><span>天</span></div>
+<div class="reg_text3"><span>已有</span><span class="rt_2"><%= @event.people_num %></span><span>人报名</span></div>
+<div class="reg_btn">
+  <a href="http://yidong.wufoo.com/forms/e/ " target="_blank">
+    <% if @event.time_end.to_i > 0 %>
+      <img src="/images/ac_pic2.gif" width="145" height="30" />
+    <% else %>
+      <img src="/images/reg_btn2.gif" width="145" height="30" />
+    <% end %>
+  </a>
+</div>
+
+
+<!--<div class="mc_text">简单易行&nbsp;快乐运动&nbsp;人人受益&nbsp;健康生活</div>
+<div class="mc_text2">通过可持续的健康倡导活动,<br />
+提高大众对慢性疾病的预防意识和健康自我管理能力,<br />
+为疾病患者尤其是弱势人群提供更多支持。</div>
+<div class="mc_button"><span><a href="contact.html"><img src="images/ac_pic8.gif" width="76" height="27" /></a></span><span><a href="donation.html"><img src="images/ac_pic9.gif" width="76" height="27" /></a></span></div>-->
+</div>
+</div>
+
+
+
 <div class="mission">
 <div class="mission_title"><span class="mt_1">我们的使命</span></div>
 <div class="mission_con">
@@ -68,15 +84,16 @@
 <div class="mc_text2">通过可持续的健康倡导活动,<br />
 提高大众对慢性疾病的预防意识和健康自我管理能力,<br />
 为疾病患者尤其是弱势人群提供更多支持。</div>
-<div class="mc_button"><span><a href="../contact.html"><img src="/images/ac_pic8.gif" width="76" height="27" /></a></span><span><a href="../donation.html"><img src="/images/ac_pic9.gif" width="76" height="27" /></a></span></div>
+<div class="mc_button"><span><a href="contact.html"><img src="/images/ac_pic8.gif" width="76" height="27" /></a></span><span><a href="donation.html"><img src="/images/ac_pic9.gif" width="76" height="27" /></a></span></div>
 </div>
 </div>
 
-<%= render "events_list"%>
+
+
+<%= render "events_list" %>
 
 </div>
 
 
 </div>
 </div>
-

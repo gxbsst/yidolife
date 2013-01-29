@@ -1,17 +1,16 @@
-# encoding: UTF-8
 module Refinery
   module Events
     class Event < Refinery::Core::BaseModel
       self.table_name = 'refinery_events'
 
-      attr_accessible :title, :photo_id, :start_time, :over_time, :address, :fee, :categroy, :maker, :description, :is_show, :position
+      attr_accessible :title, :photo_id, :time, :address,:people_num, :fee, :categroy, :end_time, :description, :is_show, :position
 
-      acts_as_indexed :fields => [:title, :address, :fee, :categroy, :maker, :description]
+      acts_as_indexed :fields => [:title, :time, :address, :fee, :categroy, :end_time, :description]
 
       validates :title, :presence => true, :uniqueness => true
-      validate :time_validation
 
       belongs_to :photo, :class_name => '::Refinery::Image'
+      
       after_save :update_is_show
 
       def update_is_show
@@ -29,17 +28,15 @@ module Refinery
        end  
       end
 
-      def time_validation
-        if start_time.present?
-        start = start_time.strftime("%Y-%m-%d %H:%M:%S") 
-        over = over_time.strftime("%Y-%m-%d %H:%M:%S")
-        if start >= over
-          errors.add(:time_validate,"活动结束时间不能小于等于活动开始时间")
-        end 
-        end 
-      end
+     def time_end
+     	time_end = (end_time - Time.now)/3600/24
+     	if time_end <=  0
+     		time_end = 0
+     	else
+            time_end
+     	end 
+     end
 
-   
     end
   end
 end

@@ -54,7 +54,8 @@
 <li><a href="/events">活动</a></li>
 <li><a href="/topics">专题</a></li>
 <li><a href="/downloads">指南</a></li> 
-<li class="menu_last"><a href="/stories">故事</a></li>
+<li class="ml_1"><a href="/stories">故事</a></li>
+<li class="menu_last"><a href="/donation" class="btn_menu">捐赠</a></li>
 </ul>
 </div>
 </div>
@@ -94,10 +95,10 @@
 		<div class="tcc_img"><%= image_fu(event.photo, "140x180px") %></div>
 		<dl class="tcc_text">
 		<dt><%= event.title %></dt>
-		<dd>时间:  <%= event.start_time %> 至 <%= event.over_time %></dd>
+		<dd>时间:  <%= event.time.strftime("%Y-%m-%d %H:%M:%S") %></dd>
 		<dd>地点:  <%= event.address %></dd>
 		<dd>费用:  <%= event.fee %>    </dd>
-		<dd>发起人: <%= event.maker %> </dd>
+		<dd>报名截止: <%= event.end_time.strftime("%Y-%m-%d %H:%M:%S") %> </dd>
 		<dd class="btn"><a href="/events/<%= event.id.to_s %>"><img src="images/index_pic6.gif" width="76" height="27" /></a></dd>
 		</dl>
 		</div>
