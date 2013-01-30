@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129081241) do
+ActiveRecord::Schema.define(:version => 20130130034040) do
 
   create_table "feedbacks", :force => true do |t|
     t.string   "description"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20130129081241) do
     t.integer  "position"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "date_end"
+    t.string   "count_url"
   end
 
   create_table "refinery_feedbacks", :force => true do |t|

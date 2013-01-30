@@ -1,0 +1,1 @@
+EVENT = YAML.load_file(Rails.root.join('config', 'event.yml'))

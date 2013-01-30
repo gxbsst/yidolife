@@ -27,7 +27,7 @@
 <dd>地点:  <%= @event.address %></dd>
 <dd>费用:  <%= @event.fee %></dd>
 <dd>类型:  <%= @event.categroy %></dd>
-<dd>报名截止: <%= @event.end_time.strftime("%Y-%m-%d %H:%M:%S") %> </dd>
+<dd>报名截止: <%= @event.end_time.strftime("%Y-%m-%d %H:%M:%S") %></dd>
 
 </dl>
 </div>
@@ -54,11 +54,11 @@
 <div class="reg_con">
 
 <div class="reg_text1">距离报名结束还有</div>
-<div class="reg_text2"><span class="rt_1"><%= @event.time_end.to_i %></span><span>天</span></div>
-<div class="reg_text3"><span>已有</span><span class="rt_2"><%= @event.people_num %></span><span>人报名</span></div>
+<div class="reg_text2"><span class="rt_1"><%= @event.date_end %></span><span>天</span></div>
+<div class="reg_text3"><span>已有</span><span class="rt_2"><%= @people_num %></span><span>人报名</span></div>
 <div class="reg_btn">
  
-    <% if @event.time_end.to_i > 0 %>
+    <% if @event.date_end > 0 %>
       <a href="http://yidong.wufoo.com/forms/e/ " target="_blank">
       <img src="/images/ac_pic2.gif" width="145" height="30" />
     <% else %>
