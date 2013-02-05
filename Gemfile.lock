@@ -19,6 +19,9 @@ PATH
       refinerycms-core (~> 2.0.9)
     refinerycms-photos (1.0)
       refinerycms-core (~> 2.0.9)
+    refinerycms-portfolio (2.0.0)
+      awesome_nested_set (~> 2.1.0)
+      refinerycms-core (~> 2.0.0)
     refinerycms-specials (1.0)
       refinerycms-core (~> 2.0.9)
     refinerycms-stories (1.0)
@@ -226,6 +229,7 @@ DEPENDENCIES
   refinerycms-i18n (~> 2.0.0)
   refinerycms-partners!
   refinerycms-photos!
+  refinerycms-portfolio!
   refinerycms-specials!
   refinerycms-stories!
   refinerycms-topics!

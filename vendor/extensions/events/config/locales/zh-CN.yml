@@ -33,6 +33,8 @@ zh-CN:
         fee: 费用
         categroy: 类型
         end_time: 报名结束时间
+        count_url: 报名人数链接
+        date_end: 距离报名结束时间
         people_num: 报名人数
         description: 活动详情
         is_show: 是否展示首页

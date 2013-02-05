@@ -3,7 +3,7 @@ module Refinery
     class Banner < Refinery::Core::BaseModel
       self.table_name = 'refinery_banners'
 
-      attr_accessible :title, :picture_id, :position
+      attr_accessible :title, :picture_id, :url, :position
 
       acts_as_indexed :fields => [:title]
 

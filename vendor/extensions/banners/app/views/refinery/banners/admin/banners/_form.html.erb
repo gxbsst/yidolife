@@ -19,6 +19,12 @@
                :toggle_image_display => false %>
 
   </div>
+
+   <div class='field'>
+    <%= f.label :url -%>
+    <%= f.text_field :url -%>
+
+  </div>
   
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,

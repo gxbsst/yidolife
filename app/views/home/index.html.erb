@@ -74,7 +74,11 @@
    <div id="bannerlist">
    <ul>
    	<% @banners.each do |banner| %>
-     <li><a href="#"><%= image_fu(banner.picture) %></a></li>
+     <li>
+     	<%= link_to banner.url do %>
+     	   <%= image_fu(banner.picture) %>
+     	<% end %>
+     </li>
     <% end %>
    </ul>
  </div>
@@ -92,7 +96,7 @@
 <% unless @event.blank? %>
 	<% @event.each do |event| %>
 		<div class="tac_con">
-		<div class="tcc_img"><%= image_fu(event.photo, "140x180px") %></div>
+		<div class="tcc_img"><%= image_fu(event.photo, "120x180px") %></div>
 		<dl class="tcc_text">
 		<dt><%= event.title %></dt>
 		<dd>时间:  <%= event.time.strftime("%Y-%m-%d %H:%M:%S") %></dd>

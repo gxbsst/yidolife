@@ -113,9 +113,9 @@ span.tt_2{ font-size:12px; padding-right:7px; color:#777; }
 span.tt_3{ background:url(../images/index_pic1.gif) repeat-x 0px 7px; height:12px; width:395px;}
 
 .tac_con{ overflow:hidden; padding-left:4px; padding-bottom:55px; padding-top:25px; width:566px; }
-.tcc_img{ float:left; margin-right:25px; border:3px solid #ddd;}
+.tcc_img{ float:left; margin-right:25px; border:3px solid #ddd;width:120px; height:180px;}
 dl.tcc_text{ display:block; float:left;}
-dl.tcc_text dt{ display:block; width:325px; font-size:14px; line-height:23px; margin-bottom:10px;} 
+dl.tcc_text dt{ display:block; width:325px; font-size:14px; line-height:23px; margin-bottom:10px;}
 dl.tcc_text dd{ display:block; margin:0px; line-height:21px; color:#666; }
 dl.tcc_text dd.btn{ margin-top:12px;}
 
@@ -235,6 +235,21 @@ span.mt_2{ display:block; height:33px; background:#ffde00 url(../images/ac_pic1.
 .story_title{ color:#4f0c0f; font-size:15px; font-weight:bold; text-align:center; margin-bottom:10px;}
 .story_date{ color:#999; text-align:center; margin-bottom:20px;}
 .stc_con p{ display:block; line-height:24px; margin-bottom:20px;}
+
+
+
+
+#demo {
+background: #FFF;
+overflow:hidden;
+/*border: 1px dashed #CCC;*/
+/*width: 500px;*/
+}
+#demo img {border: 3px solid #F2F2F2;}
+#indemo {float: left;width: 800%;}
+#demo1 {float: left;}
+
+#demo2 {float: left;}
 
 
 /* 指南 */

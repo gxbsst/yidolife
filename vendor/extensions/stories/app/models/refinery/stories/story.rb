@@ -8,6 +8,8 @@ module Refinery
       acts_as_indexed :fields => [:title, :content]
 
       validates :title, :presence => true, :uniqueness => true
+
+      has_one :gallery, :class_name => 'Refinery::Portfolio::Gallery'
     end
   end
 end

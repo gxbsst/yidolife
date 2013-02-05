@@ -1,10 +1,9 @@
 module Refinery
   module Events
     class EventsController < ::ApplicationController
-      require 'net/http'
-      require 'net/https'
-      require 'uri'
-
+      
+      require "net/http"
+      require "uri"
       before_filter :find_all_events
       before_filter :find_page
 

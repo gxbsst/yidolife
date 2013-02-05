@@ -30,15 +30,6 @@ module Refinery
        end  
       end
 
-     def time_end
-     	time_end = (end_time - Time.now)/3600/24
-     	if time_end <=  0
-     		time_end = 0
-     	else
-            time_end
-     	end 
-     end
-
     end
   end
 end

@@ -47,3 +47,6 @@ Refinery::Feedbacks::Engine.load_seed
 
 # Added by Refinery CMS Banners extension
 Refinery::Banners::Engine.load_seed
+
+# Added by Refinery CMS Portfolio Engine
+Refinery::Portfolio::Engine.load_seed
