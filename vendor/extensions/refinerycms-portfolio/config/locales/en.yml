@@ -1,0 +1,62 @@
+en:
+  refinery:
+    plugins:
+      portfolio:
+        title: Portfolio
+    portfolio:
+      admin:
+        items:
+          item:
+            gallery: Gallery
+            gallery_help: Add this image to a gallery
+            delete: Remove this image from this gallery
+            edit: Edit this image
+            view_live_html: View this image in its gallery
+          actions:
+            back_to_galleries: Return to Galleries
+            create_new: Add new Image
+            reorder: Reorder Images
+            reorder_done: Done Reordering Images
+          records:
+            no_items_yet: There are no images here.
+            sorry_no_results: Sorry! There are no results found.
+            title: Images
+        galleries:
+          actions:
+            add_image: Add an image
+            create_new: Add New Gallery
+            reorder: Reorder Galleries
+            reorder_done: Done Reordering Galleries
+            view_root_images: View top-level images
+          records:
+            title: Galleries
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Galleries yet. Click "Add New Gallery" to add your first gallery.
+          gallery:
+            add_image: Add an image to this gallery
+            delete: Remove this gallery forever
+            edit: Edit this gallery
+            item_count:
+              zero: no images
+              one: 1 image
+              other: '%{count} images'
+            new_child: Add a new child gallery
+            view_live_html: View this gallery live <br/><em>(opens in a new window)</em>
+          form:
+            parent_gallery: Parent Gallery
+            parent_gallery_help: You can nest a gallery inside another gallery, creating a multiple-level portfolio. Choose a gallery to make this gallery the child of the one you select, or leave it blank to keep it as a top-level gallery.
+            cover_image: Cover Image
+            cover_image_help: The image that is used as the cover of this gallery.
+      galleries:
+        show:
+          other: Other Galleries
+  activerecord:
+    attributes:
+      'refinery/portfolio/gallery':
+        title: Title
+        body: Body
+        parent_id: Parent
+        lft: Lft
+        rgt: Rgt
+        depth: Depth
+        type: Type

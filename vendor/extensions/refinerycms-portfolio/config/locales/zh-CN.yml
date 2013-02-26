@@ -1,0 +1,63 @@
+zh-CN:
+  refinery:
+    plugins:
+      portfolio:
+        title: 故事相册
+    portfolio:
+      admin:
+        items:
+          item:
+            gallery: 相册
+            gallery_help: 添加图片到相册
+            delete: 从相册删除图片
+            edit: 编辑图片
+            view_live_html: 在相册中看图片
+          actions:
+            back_to_galleries: 返回相册
+            create_new: 添加图片
+            reorder: 图片排序
+            reorder_done: 图片排序完成
+          records:
+            no_items_yet: 没有图片
+            sorry_no_results: Sorry! There are no results found.
+            title: 图片
+        galleries:
+          actions:
+            add_image: 添加图片
+            create_new: 添加新相册
+            reorder: 相册排序
+            reorder_done: 相册排序完成
+            view_root_images: View top-level images
+          records:
+            title: 相册
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: 没有相册，点击“添加相册”创建相册
+          gallery:
+            add_image: 添加图片到相册
+            delete: 删除相册
+            edit: 编辑相册
+            item_count:
+              zero: mei you
+              one: 1 image
+              other: '%{count} images'
+            new_child: Add a new child gallery
+            view_live_html: View this gallery live <br/><em>(opens in a new window)</em>
+          form:
+            parent_gallery: Parent Gallery
+            parent_gallery_help: You can nest a gallery inside another gallery, creating a multiple-level portfolio. Choose a gallery to make this gallery the child of the one you select, or leave it blank to keep it as a top-level gallery.
+            cover_image: Cover Image
+            cover_image_help: The image that is used as the cover of this gallery.
+      galleries:
+        show:
+          other: Other Galleries
+  activerecord:
+    attributes:
+      'refinery/portfolio/gallery':
+        title: 名称
+        story_id: 所属的故事
+        body: Body
+        parent_id: Parent
+        lft: Lft
+        rgt: Rgt
+        depth: Depth
+        type: Type
