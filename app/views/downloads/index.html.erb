@@ -19,7 +19,7 @@
   <ul class="guide_list">
 <% @files.each do |file| %>
 	<li>
-	<span class="gl_img"><%= image_fu(file.picture, "160x200") %></span>
+	<span class="gl_img"><%= image_fu(file.picture, "150x280px") %></span>
 	<span class="gl_title"><%= file.name %></span>
 	<span class="gl_button">
 		<%= link_to "点击下载",file.url %>   

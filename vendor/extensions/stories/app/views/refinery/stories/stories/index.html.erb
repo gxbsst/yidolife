@@ -29,7 +29,7 @@
 
 <% if @story.gallery.present? %>
   <% @story.gallery.items.each do |item|%>
-	    <%= link_to item.image.url,:rel => "lightbox[roadtrip]" do %>
+	    <%= link_to item.image.url,:rel => "lightbox[roadtrip]",:title => item.title  do %>
 		    <%= image_fu(item.image, "400x100") %>
 		<% end %>
   <% end %>

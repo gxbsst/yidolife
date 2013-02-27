@@ -28,41 +28,13 @@
   <% end%>
 
 
-
 <% if @story.gallery.present? %>
-<div id="demo">
-<div id="indemo">
-<div id="demo1">
-<% @story.gallery.items.each do |item|%>
-    <%= image_fu(item.image, "400x100") %>
+  <% @story.gallery.items.each do |item|%>
+	    <%= link_to item.image.url,:rel => "lightbox[roadtrip]",:title => item.title  do %>
+		    <%= image_fu(item.image, "400x100") %>
+		<% end %>
+  <% end %>
 <% end %>
-</div>
-<div id="demo2"></div>
-</div>
-</div>
-<% end %>
-
-<script>
-<!--
-var speed=30;
-var tab=document.getElementById("demo");
-var tab1=document.getElementById("demo1");
-var tab2=document.getElementById("demo2");
-tab2.innerHTML=tab1.innerHTML;
-function Marquee(){
-if(tab2.offsetWidth-tab.scrollLeft<=0)
-tab.scrollLeft-=tab1.offsetWidth
-else{
-tab.scrollLeft++;
-}
-}
-var MyMar=setInterval(Marquee,speed);
-tab.onmouseover=function() {clearInterval(MyMar)};
-tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
--->
-</script>
-
-
 
 </div>
 </div>
