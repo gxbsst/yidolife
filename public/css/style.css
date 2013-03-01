@@ -17,8 +17,8 @@ img{ border:none;}
 /* 首页 */
 #bannercontent{ /*left:-30px;*/position:relative; height:325px; width:960px;}
 .prev{
-	width:32px;
-	height:38px;
+	width:52px;
+	height:48px;
 	background:url(../images/prev.png) no-repeat 0px 0px;
 	cursor:pointer;
 	position:absolute;
@@ -29,8 +29,8 @@ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/prev.png'
 
 
 .next{
-	width:32px;
-	height:38px;
+	width:52px;
+	height:48px;
 	background:url(../images/next.png) no-repeat 0px 0px;
 	cursor:pointer;
 	position:absolute;
