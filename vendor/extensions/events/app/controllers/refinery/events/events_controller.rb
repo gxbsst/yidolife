@@ -18,6 +18,7 @@ module Refinery
       def show
         @event = Event.find(params[:id])
         @events = Event.where("is_show = 0").order('position DESC, created_at ASC').limit(4)
+        @recent_events = Event.where("is_recent = 1").order('position DESC, created_at ASC')
 
 
         uri = URI.parse(@event.count_url)   
