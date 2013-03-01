@@ -9,6 +9,7 @@ module Refinery
 
       def index
         @events =  Event.where("is_show = 0").order('position DESC, created_at ASC')
+        @recent_events = Event.where("is_recent = 1").order('position DESC, created_at ASC')
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @event in the line below:
         present(@page)

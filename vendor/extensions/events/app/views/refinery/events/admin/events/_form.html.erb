@@ -88,6 +88,12 @@
 
   </div>
   
+   <div class='field'>
+    <%= f.label :is_recent -%>
+    <%= f.check_box :is_recent, :checked => @event[:is_recent]  -%>
+
+  </div>
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.events.admin.events.event'),

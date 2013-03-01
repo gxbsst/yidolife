@@ -96,7 +96,7 @@
 <% unless @event.blank? %>
 	<% @event.each do |event| %>
 		<div class="tac_con">
-		<div class="tcc_img"><%= image_fu(event.photo, "120x180px") %></div>
+		<div class="tcc_img"><%= image_fu(event.photo, "120x180") %></div>
 		<dl class="tcc_text">
 		<dt><%= event.title %></dt>
 		<dd>时间:  <%= event.time.strftime("%Y-%m-%d %H:%M:%S") %></dd>

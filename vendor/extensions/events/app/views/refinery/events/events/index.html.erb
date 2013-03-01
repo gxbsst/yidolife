@@ -32,6 +32,41 @@
 	</dl> 
 </div>
 
+
+<div class="jq_activity">
+<div class="tac_title">
+<span class="tt_1">近期活动</span><span class="tt_2">RECENT ACTIVITY</span><span class="tt_8"></span>
+</div>
+<ul class="act_review">
+  <% @recent_events.each do |event| %>
+	  <li> 
+	  	<span class="ar_img">
+	  		<%= link_to "/events/#{event.id}"  do %>
+		       <%= image_fu(event.photo, "160x240px") %>
+            <% end %> 
+	  	</span> 
+	  	<span class="ar_title"><%= link_to event.title, "/events/#{event.id}" %></span> 
+	  	<span class="ar_share">
+	  		<div id="recent_<%= event.id %>" >
+			<div id="ckepop">
+				<a href="http://www.jiathis.com/share/?uid=1341799835618494" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+				<span class="jiathis_txt">分享到：</span>	
+				<a class="jiathis_counter_style"></a>
+			</div>
+				<%= render "share_to_sns/sns_event_one",
+					            :id => event.id,
+								:title => event.title %>
+
+	        <div style="clear:both"></div>
+			</div>
+	  	</span> 
+	  </li>
+  <% end %>
+</ul>
+
+</div>
+
+
 <div class="review">
 <div class="tac_title">
 <span class="tt_1">往期回顾</span><span class="tt_2">REVIEW BACK</span><span class="tt_5"></span>
@@ -48,15 +83,14 @@
     <span class="ar_share">
     	<div id="share_<%= event.id %>" >
 		<div id="ckepop">
-			<a href="http://www.jiathis.com/share?uid=1341799835618494" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+			<a href="http://www.jiathis.com/share/?uid=1341799835618494" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 			<span class="jiathis_txt">分享到：</span>	
 			<a class="jiathis_counter_style"></a>
 		</div>
-		<script type="text/javascript" >
-           $("#share_<%= event.id %>").mouseover(function(){  
-			        setShare("<%= event.title %>", "<%= strip_tags(event.description) %>");  
-			    });
-        </script>
+		<%= render "share_to_sns/sns_event_second",
+					            :id => event.id,
+								:title => event.title %>
+
         <div style="clear:both"></div>
 		</div>
     </span> 
@@ -69,10 +103,8 @@
 </div>
 
 <script type="text/javascript" >
- function setShare(title,summary) {  
- 				console.log(title);
+ function setShare(title,summary) { 
   			        jiathis_config.title = title;
- 			        jiathis_config.summary = summary;
   			    }
   			    var jiathis_config={
   			        data_track_clickback:true,
