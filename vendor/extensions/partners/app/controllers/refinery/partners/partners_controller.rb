@@ -6,7 +6,7 @@ module Refinery
       before_filter :find_page
 
       def index
-        @events = Refinery::Events::Event.where("is_show = 0").order('position DESC, created_at ASC').limit(4)
+        @recent_events = Refinery::Events::Event.where("is_recent = 1").order('position DESC, created_at ASC').limit(4)
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @partner in the line below:
         present(@page)

@@ -3,7 +3,7 @@ module Refinery
     class Event < Refinery::Core::BaseModel
       self.table_name = 'refinery_events'
 
-      attr_accessible :title, :photo_id, :time, :address,:people_num, :fee, :categroy, :end_time, :description, :is_show, :is_recent, :date_end, :count_url, :position
+      attr_accessible :title, :photo_id, :time, :address,:people_num, :fee, :categroy, :end_time, :description, :is_show, :is_recent, :count_url, :position
 
       acts_as_indexed :fields => [:title, :time, :address, :fee, :categroy, :end_time, :description]
 
@@ -29,6 +29,14 @@ module Refinery
          end
        end  
       end
+
+
+      def end_day(end_time)
+        day = (end_time - Time.now)/(24*60*60)
+        day < 0 ? 0:day.to_i
+         
+      end
+
 
     end
   end

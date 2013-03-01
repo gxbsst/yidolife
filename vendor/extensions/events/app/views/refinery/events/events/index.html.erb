@@ -22,11 +22,11 @@
 	<div class="rec_img"><%=image_fu(@event.photo, "180x270px") %></div>
 	<dl class="rec_text">
 	<dt><%= @event.title %></dt>
-	<dd>时间:  <%= @event.time.strftime("%Y-%m-%d %H:%M:%S") %></dd>
+	<dd>时间:  <%= @event.time.strftime("%Y-%m-%d %H:%M") %></dd>
 	<dd>地点:  <%= @event.address %></dd>
 	<dd>费用:  <%= @event.fee %></dd>
 	<dd>类型:  <%= @event.categroy %></dd>
-	<dd>报名截止: <%= @event.end_time.strftime("%Y-%m-%d %H:%M:%S") %>  </dd>
+	<dd>报名截止: <%= @event.end_time.strftime("%Y-%m-%d") %>  </dd>
 	<dd>活动详情: <%= raw  truncate(@event.description,:length => 20,:omission => '...') %></dd>
 	<dd class="button1"><a href="/events/<%= @event.id.to_s %>"><img src="images/activity_pic3.gif" width="76" height="27" /></a></dd>
 	</dl> 
