@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227061840) do
+ActiveRecord::Schema.define(:version => 20130304013650) do
 
   create_table "feedbacks", :force => true do |t|
     t.string   "description"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20130227061840) do
     t.integer  "date_end"
     t.string   "count_url"
     t.integer  "is_recent"
+    t.string   "enjoy_url"
   end
 
   create_table "refinery_feedbacks", :force => true do |t|

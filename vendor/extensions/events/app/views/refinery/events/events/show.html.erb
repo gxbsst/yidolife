@@ -64,8 +64,12 @@
 <div class="reg_btn">
  
     <% if @event.end_day(@event.end_time) > 0 %>
-      <a href="http://yidong.wufoo.com/forms/e/ " target="_blank">
-      <img src="/images/ac_pic2.gif" width="145" height="30" />
+      <% if @event.enjoy_url.present? %>
+        <%= link_to image_tag("/images/ac_pic2.gif",:size => "145x30"),@event.enjoy_url %>
+      <% else %>
+        <a href="http://yidong.wufoo.com/forms/e/ " target="_blank">
+        <img src="/images/ac_pic2.gif" width="145" height="30" />
+      <% end %>
     <% else %>
       <img src="/images/reg_btn2.gif" width="145" height="30" />
     <% end %>
