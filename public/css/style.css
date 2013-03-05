@@ -264,8 +264,8 @@ ul.guide_list{ display:block; overflow:hidden; padding-top:10px;  margin-bottom:
 ul.guide_list li{ display:block; float:left; width:172px; margin-right:20px; margin-bottom:25px;}
 ul.guide_list li.rev_last{ margin-right:0px;}
 ul.guide_list li span{ display:block;}
-span.gl_img{  padding:5px; border:1px solid #ddd;}
-span.gl_title{ line-height:20px; margin:10px 5px; margin-bottom:0px; padding-bottom:10px; height:20px; overflow:hidden; text-align:center;}
+span.gl_img{  padding:5px; border:1px solid #ddd;width: 150;height: 280px}
+span.gl_title{ line-height:20px; margin:10px 5px; margin-bottom:0px; padding-bottom:10px; height:35px;  text-align:center;}
 span.gl_button{ text-align:center;}
 /*span.gl_button a{ display:block; background:url(../images/guide_pic6.gif) no-repeat 50px 0px; width:120px; height:26px; font-size:0px; text-indent:-10000px;}
 */
