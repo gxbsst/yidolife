@@ -19,7 +19,18 @@ module Refinery
         @event = Event.find(params[:id])
         @events = Event.where("is_show = 0").order('position DESC, created_at ASC').limit(4)
         @recent_events = Event.where("is_recent = 1").order('position DESC, created_at ASC')
-
+        
+        @tudes = []
+        @zoom = 10
+        @center =[31.2059, 121.399703]
+        @event_maps = Refinery::Googlemaps::Googlemap.where("event_id = ?",params[:id])
+        @event_maps.each do |event_map|
+          a = []
+          a << event_map.address
+          a << event_map.longitude
+          a << event_map.latitude
+          @tudes << a  
+        end
 
         uri = URI.parse(@event.count_url)   
         http = Net::HTTP.new(uri.host, uri.port)                                        
