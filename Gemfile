@@ -45,6 +45,12 @@ gem 'fancybox-rails', :git => 'git://github.com/sverigemeny/fancybox-rails', :re
 # To use debugger
 # gem 'debugger'
 
+
+# 处理Google地图
+gem "geocoder"
+gem 'gmaps4rails'
+
+
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.0'
 
@@ -66,3 +72,4 @@ gem 'refinerycms-partners', :path => 'vendor/extensions'
 gem 'refinerycms-feedbacks', :path => 'vendor/extensions'
 gem 'refinerycms-banners', :path => 'vendor/extensions'
 gem 'refinerycms-events', :path => 'vendor/extensions'
+gem 'refinerycms-googlemaps', :path => 'vendor/extensions'
