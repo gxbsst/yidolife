@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      googlemaps:
+        title: Googlemaps
+    googlemaps:
+      admin:
+        googlemaps:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Googlemap
+            reorder: Réordonner les Googlemaps
+            reorder_done: Fin de réordonnancement des Googlemaps
+          records:
+            title: Googlemaps
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Googlemap. Cliquer sur "Créer un(e) nouve(au/l/lle) Googlemap" pour créer votre premi(er/ère) googlemap.'
+          googlemap:
+            view_live_html: Voir ce(t/tte) googlemap <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) googlemap
+            delete: Supprimer définitivement ce(t/tte) googlemap
+      googlemaps:
+        show:
+          other: Autres Googlemaps
+  activerecord:
+    attributes:
+      'refinery/googlemaps/googlemap':
+        event_id: Event
+        address: Address
+        longitude: Longitude
+        latitude: Latitude

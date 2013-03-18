@@ -1,0 +1,23 @@
+<%= form_for [refinery, :googlemaps_admin, @googlemap] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @googlemap,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :event_id -%>
+    <%= f.select :event_id, Refinery::Events::Event.all.collect{|t| [t.title, t.id]}  %>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :address -%>
+    <%= f.text_field :address  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.googlemaps.admin.googlemaps.googlemap'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @googlemap.address) %>
+<% end -%>

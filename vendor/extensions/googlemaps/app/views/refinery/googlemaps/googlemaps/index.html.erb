@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="googlemaps">
+    <% @googlemaps.each do |googlemap| %>
+      <li>
+        <%= link_to googlemap.address, refinery.googlemaps_googlemap_path(googlemap) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

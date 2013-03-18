@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      googlemaps:
+        title: Googlemaps
+    googlemaps:
+      admin:
+        googlemaps:
+          actions:
+            create_new: Lag en ny Googlemap
+            reorder: Endre rekkefølgen på Googlemaps
+            reorder_done: Ferdig å endre rekkefølgen Googlemaps
+          records:
+            title: Googlemaps
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Googlemaps enda. Klikk på "Lag en ny Googlemap" for å legge til din første googlemap.
+          googlemap:
+            view_live_html: Vis hvordan denne googlemap ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne googlemap
+            delete: Fjern denne googlemap permanent
+      googlemaps:
+        show:
+          other: Andre Googlemaps
+  activerecord:
+    attributes:
+      'refinery/googlemaps/googlemap':
+        event_id: Event
+        address: Address
+        longitude: Longitude
+        latitude: Latitude

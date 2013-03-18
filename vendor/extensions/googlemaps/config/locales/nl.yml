@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      googlemaps:
+        title: Googlemaps
+    googlemaps:
+      admin:
+        googlemaps:
+          actions:
+            create_new: Maak een nieuwe Googlemap
+            reorder: Wijzig de volgorde van de Googlemaps
+            reorder_done: Klaar met het wijzingen van de volgorde van de Googlemaps
+          records:
+            title: Googlemaps
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Googlemaps. Druk op 'Maak een nieuwe Googlemap' om de eerste aan te maken.
+          googlemap:
+            view_live_html: Bekijk deze googlemap op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze googlemap
+            delete: Verwijder deze googlemap voor eeuwig
+      googlemaps:
+        show:
+          other: Andere Googlemaps
+  activerecord:
+    attributes:
+      'refinery/googlemaps/googlemap':
+        event_id: Event
+        address: Address
+        longitude: Longitude
+        latitude: Latitude

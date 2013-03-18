@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @googlemap.address %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Event</h1>
+    <p>
+      <%=raw @googlemap.event_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Address</h1>
+    <p>
+      <%=raw @googlemap.address %>
+    </p>
+  </section>
+  <section>
+    <h1>Longitude</h1>
+    <p>
+      <%=raw @googlemap.longitude %>
+    </p>
+  </section>
+  <section>
+    <h1>Latitude</h1>
+    <p>
+      <%=raw @googlemap.latitude %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="googlemaps">
+      <% @googlemaps.each do |googlemap| %>
+        <li>
+          <%= link_to googlemap.address, refinery.googlemaps_googlemap_path(googlemap) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

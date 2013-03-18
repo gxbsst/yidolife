@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      googlemaps:
+        title: Googlemaps
+    googlemaps:
+      admin:
+        googlemaps:
+          actions:
+            create_new: 建立新的 Googlemap
+            reorder: 对 Googlemaps 重新排序
+            reorder_done: 对 Googlemaps 的重新排序结束
+          records:
+            title: Googlemaps
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Googlemaps yet. Click "Add New Googlemap" to add your first googlemap.
+            no_items_yet: 目前没有 Googlemaps . 点击 "Add New Googlemap" 创建一个googlemap.
+          googlemap:
+            view_live_html: 查看 googlemap 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 googlemap
+            delete: 永久删除 googlemap
+      googlemaps:
+        show:
+          other: 其他 Googlemaps
+  activerecord:
+    attributes:
+      'refinery/googlemaps/googlemap':
+        event_id: Event
+        address: Address
+        longitude: Longitude
+        latitude: Latitude

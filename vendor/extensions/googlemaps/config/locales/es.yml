@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      googlemaps:
+        title: Googlemaps
+#        article: masculino/femenino
+    googlemaps:
+      admin:
+        googlemaps:
+          actions:
+            create_new: Crear nuevo googlemap
+            reorder: Reordenar googlemaps
+            reorder_done: Reordenación de googlemaps completada
+          records:
+            title: Googlemaps
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay googlemaps todavía. Pulsa en "Crear nuevo Googlemap" para crear tu primer googlemap.
+          googlemap:
+            view_live_html: Ver este googlemap como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este googlemap
+            delete: Borrar este googlemap para siempre
+      googlemaps:
+        show:
+          other: Otros googlemaps
+  activerecord:
+    attributes:
+      'refinery/googlemaps/googlemap':
+        event_id: Event
+        address: Address
+        longitude: Longitude
+        latitude: Latitude

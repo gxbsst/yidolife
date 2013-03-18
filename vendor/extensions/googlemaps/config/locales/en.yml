@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      googlemaps:
+        title: Googlemaps
+    googlemaps:
+      admin:
+        googlemaps:
+          actions:
+            create_new: Add New Googlemap
+            reorder: Reorder Googlemaps
+            reorder_done: Done Reordering Googlemaps
+          records:
+            title: Googlemaps
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Googlemaps yet. Click "Add New Googlemap" to add your first googlemap.
+          googlemap:
+            view_live_html: View this googlemap live <br/><em>(opens in a new window)</em>
+            edit: Edit this googlemap
+            delete: Remove this googlemap forever
+      googlemaps:
+        show:
+          other: Other Googlemaps
+  activerecord:
+    attributes:
+      'refinery/googlemaps/googlemap':
+        event_id: Event
+        address: Address
+        longitude: Longitude
+        latitude: Latitude
