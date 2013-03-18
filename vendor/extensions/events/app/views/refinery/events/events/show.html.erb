@@ -43,9 +43,11 @@
 
 </div>
 
-<div class="acl_map">
-  <%= render "map",:tudes => @tudes, :center => @center, :zoom => @zoom %>
-</div>
+<% if @event_maps.present? %>
+  <div class="acl_map">
+    <%= render "map",:tudes => @tudes, :center => @center, :zoom => @zoom %>
+  </div>
+<% end %>
 
 </div>
 
