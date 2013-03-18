@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130304013650) do
+ActiveRecord::Schema.define(:version => 20130318024859) do
 
   create_table "feedbacks", :force => true do |t|
     t.string   "description"
@@ -54,6 +54,16 @@ ActiveRecord::Schema.define(:version => 20130304013650) do
     t.integer  "position"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "refinery_googlemaps", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "address"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "refinery_images", :force => true do |t|

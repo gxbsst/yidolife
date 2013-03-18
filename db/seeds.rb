@@ -50,3 +50,6 @@ Refinery::Banners::Engine.load_seed
 
 # Added by Refinery CMS Portfolio Engine
 Refinery::Portfolio::Engine.load_seed
+
+# Added by Refinery CMS Googlemaps extension
+Refinery::Googlemaps::Engine.load_seed

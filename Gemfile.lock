@@ -15,6 +15,8 @@ PATH
       refinerycms-core (~> 2.0.9)
     refinerycms-feedbacks (1.0)
       refinerycms-core (~> 2.0.9)
+    refinerycms-googlemaps (1.0)
+      refinerycms-core (~> 2.0.9)
     refinerycms-partners (1.0)
       refinerycms-core (~> 2.0.9)
     refinerycms-photos (1.0)
@@ -85,10 +87,12 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     friendly_id (4.0.9)
+    geocoder (1.1.6)
     globalize3 (0.2.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       paper_trail (~> 2)
+    gmaps4rails (1.5.6)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -217,6 +221,8 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise (~> 2.0.4)
   fancybox-rails!
+  geocoder
+  gmaps4rails
   jquery-rails (~> 2.0.0)
   mysql2
   pry
@@ -226,6 +232,7 @@ DEPENDENCIES
   refinerycms-banners!
   refinerycms-events!
   refinerycms-feedbacks!
+  refinerycms-googlemaps!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-partners!
   refinerycms-photos!
