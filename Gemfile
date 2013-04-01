@@ -73,3 +73,6 @@ gem 'refinerycms-feedbacks', :path => 'vendor/extensions'
 gem 'refinerycms-banners', :path => 'vendor/extensions'
 gem 'refinerycms-events', :path => 'vendor/extensions'
 gem 'refinerycms-googlemaps', :path => 'vendor/extensions'
+
+gem 'capistrano'
+gem 'rvm-capistrano'

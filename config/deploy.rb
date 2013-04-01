@@ -1,10 +1,18 @@
 require "bundler/capistrano"
 
-server "192.168.11.31", :web, :app, :db, primary: true
+set :application, "YidongLife"
 
-set :application, "Cooper"
 set :repository,  "git://github.com/gxbsst/yidolife.git"
 set :deploy_to, "/srv/rails/yidonglife"
+
+if ENV['RAILS_ENV'] =='production'
+  require "rvm/capistrano"
+  server "jh_web3", :web, :app, :db, primary: true
+  set :user, "root"
+else
+  server "192.168.11.31", :web, :app, :db, primary: true
+  set :user, "rails"
+end
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -13,8 +21,6 @@ set :scm, :git
 # role :app, "aries.sidways.lab"                          # This may be the same as your `Web` server
 # role :db,  "aries.sidways.lab", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
-
-set :user, "rails"
 
 set :use_sudo, false
 
