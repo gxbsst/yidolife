@@ -44,7 +44,7 @@ gem 'fancybox-rails', :git => 'git://github.com/sverigemeny/fancybox-rails', :re
 
 # To use debugger
 # gem 'debugger'
-
+gem "mini_magick"
 
 # 处理Google地图
 gem "geocoder"
