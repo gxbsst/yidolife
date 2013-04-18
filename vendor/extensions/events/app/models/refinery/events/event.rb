@@ -37,6 +37,9 @@ module Refinery
          
       end
 
+      def time_out?
+        end_time < Time.now
+      end
 
     end
   end

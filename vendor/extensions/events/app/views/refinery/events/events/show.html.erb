@@ -62,14 +62,18 @@
 <div class="reg_text1">距离报名结束还有</div>
 <div class="reg_text2">
 	<span class="rt_1">
-		<%= @event.end_day(@event.end_time) %>
+		<%#= @event.end_day(@event.end_time) %>
+    <% unless @event.time_out? %>
+    <%= distance_of_time_in_words(Time.now, @event.end_time, :discard_type => true) %>
+    <% else %>
+       0 天
+    <% end %>
 	</span>
-	<span>天</span>
 </div>
 <div class="reg_text3"><span>已有</span><span class="rt_2"><%= @people_num %></span><span>团队报名</span></div>
 <div class="reg_btn">
  
-    <% if @event.end_day(@event.end_time) > 0 %>
+    <% if !@event.time_out? %>
       <% if @event.enjoy_url.present? %>
         <%= link_to image_tag("/images/ac_pic2.gif",:size => "145x30"),@event.enjoy_url %>
       <% else %>
