@@ -33,8 +33,11 @@ module Refinery
 
       def end_day(end_time)
         day = (end_time - Time.now)/(24*60*60)
-        day < 0 ? 0:day.to_i
-         
+        day < 0 ? 0 : day.to_i
+      end
+
+      def less_one_day?
+        (end_time - Time.now) < 24*60*60
       end
 
       def time_out?

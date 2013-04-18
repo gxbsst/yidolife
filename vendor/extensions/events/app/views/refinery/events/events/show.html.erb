@@ -64,7 +64,11 @@
 	<span class="rt_1">
 		<%#= @event.end_day(@event.end_time) %>
     <% unless @event.time_out? %>
-    <%= distance_of_time_in_words(Time.now, @event.end_time, :discard_type => true) %>
+    <% if  @event.less_one_day? %>
+      <%= distance_of_time_in_words(Time.now, @event.end_time, :discard_type => true) %>
+    <% else %>
+    <%= @event.end_day(@event.end_time) %> 天
+    <% end %>
     <% else %>
        0 天
     <% end %>
